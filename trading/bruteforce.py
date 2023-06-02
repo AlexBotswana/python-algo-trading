@@ -23,7 +23,7 @@ def bruteforce(max_invest, data):
             for stock in lst_stocks:
                 if (max_invest >= current_invest + float(stock[1])):
                     current_invest = current_invest + float(stock[1])
-                    current_performance = current_performance + float(stock[1])*float(stock[2])
+                    current_performance = current_performance + float(stock[1])*float(stock[2])/100
                     lst_current_invest = lst_current_invest + stock
             #compare with the previous result to choose the best performance between 2 combinations
             if (best_performance < current_performance):
